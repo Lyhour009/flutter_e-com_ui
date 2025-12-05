@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screens/home_screen.dart';
+import 'package:flutter_ui/screens/forgotpsd_screen.dart';
+import 'package:flutter_ui/screens/navigation_screen.dart';
 import 'package:flutter_ui/screens/singup_screen.dart';
 import 'package:flutter_ui/screens/welcome_screen.dart';
 
@@ -75,7 +76,12 @@ class LoginScreen extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.centerRight,
-                child: TextButton(onPressed: () {}, child: _buildText("Forget password?", Colors.deepPurpleAccent, 16, FontWeight.w700)),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => ForgotPasswordScreen()));
+                  },
+                  child: _buildText("Forget password?", Colors.deepPurpleAccent, 16, FontWeight.w700),
+                ),
               ),
               SizedBox(height: 28),
               SizedBox(
@@ -87,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                   ),
                   onPressed: () {
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => HomeScreen()), (route) => false);
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => NavigationScreen()), (route) => false);
                   },
                   child: _buildText("Login", Colors.white, 22, FontWeight.w600),
                 ),

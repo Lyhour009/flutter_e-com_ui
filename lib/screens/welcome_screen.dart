@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screens/home_screen.dart';
 import 'package:flutter_ui/screens/login_screen.dart';
+import 'package:flutter_ui/screens/navigation_screen.dart';
 import 'package:flutter_ui/screens/singup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -31,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
             Column(
               children: [
                 _buildText("E-Commerce Shop", Colors.deepPurpleAccent, 30, FontWeight.bold),
-                SizedBox(width: 320, child: _buildText("Your One Stop Shop for all your needs", Colors.black54, 20, FontWeight.w500, alignment: TextAlign.center)),
+                SizedBox(width: 320, child: _buildText("Your One Stop Shop for all your needs", Colors.black54, 19, FontWeight.w500, alignment: TextAlign.center)),
               ],
             ),
             Column(
@@ -71,7 +71,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => HomeScreen()), (route) => false);
+                Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => NavigationScreen()), (route) => false);
               },
               child: _buildText("Continue as a guest?", Colors.black54, 18, FontWeight.w400),
             ),

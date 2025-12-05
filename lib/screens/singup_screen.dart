@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screens/home_screen.dart';
 import 'package:flutter_ui/screens/login_screen.dart';
+import 'package:flutter_ui/screens/navigation_screen.dart';
 import 'package:flutter_ui/screens/welcome_screen.dart';
 
 class SingupScreen extends StatelessWidget {
@@ -96,7 +96,7 @@ class SingupScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                   ),
                   onPressed: () {
-                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => HomeScreen()), (route) => false);
+                    Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) => NavigationScreen()), (route) => false);
                   },
                   child: _buildText("Sign up", Colors.white, 22, FontWeight.w600),
                 ),
