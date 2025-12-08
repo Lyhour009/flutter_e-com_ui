@@ -1,6 +1,6 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter_ui/screens/favorite_screen.dart';
 import 'package:flutter_ui/screens/home_screen.dart';
 import 'package:flutter_ui/screens/profile_screen.dart';
